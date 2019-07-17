@@ -1,1 +1,25 @@
-{{outlet}}
+<nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+    <a class="navbar-brand" href="#">Emtasks</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+        aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-link">
+                <a>{{#link-to 'tasks'}}Home{{/link-to}}</a>
+            </li>
+            <li class="nav-link">
+                {{#link-to 'tasks.new'}}New Task{{/link-to}}
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            {{outlet}}
+        </div>
+    </div>
+</div>
