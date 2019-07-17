@@ -8,10 +8,12 @@
     <div class="collapse navbar-collapse">
         <ul class="navbar-nav mr-auto">
             <li class="nav-link">
-                <a>{{#link-to 'tasks'}}Home{{/link-to}}</a>
+                {{!-- {{#link-to 'tasks'}}Home{{/link-to}} old way of doing it--}}
+                <LinkTo @route="tasks">Home</LinkTo>
             </li>
             <li class="nav-link">
-                {{#link-to 'tasks.new'}}New Task{{/link-to}}
+                {{!-- {{#link-to 'tasks.new'}}New Task{{/link-to}} old way of doing it--}}
+                <LinkTo @route="tasks.new">New Task</LinkTo>
             </li>
         </ul>
     </div>
