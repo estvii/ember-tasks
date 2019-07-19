@@ -4,7 +4,7 @@
 {{#each this.model as |task|}}
 <div class="card card-body bg-light">
     <h4>{{task.title}}</h4>
-    <p>Due: {{task.date}}</p>
+    <p>Due: {{format-date task.date}}</p>
     <p>{{task.description}}</p>
 </div>
 {{/each}}
