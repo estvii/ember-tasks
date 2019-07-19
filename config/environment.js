@@ -12,10 +12,13 @@ module.exports = function (environment) {
     rootURL: '/',
     locationType: 'auto',
     firebase: {
-      apiKey: 'xyz',
-      authDomain: 'YOUR-FIREBASE-APP.firebaseapp.com',
-      databaseURL: 'https://YOUR-FIREBASE-APP.firebaseio.com',
-      storageBucket: 'YOUR-FIREBASE-APP.appspot.com',
+      apiKey: process.env.API_KEY,
+      authDomain: process.env.AUTH_DOMAIN,
+      databaseURL: process.env.DB_URL,
+      projectId: "emtaskss-432a8",
+      storageBucket: "",
+      messagingSenderId: "792446101684",
+      appId: "1:792446101684:web:25fa932e4e2edce8"
     },
     EmberENV: {
       FEATURES: {

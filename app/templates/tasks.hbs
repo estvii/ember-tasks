@@ -1,2 +1,10 @@
 {{outlet}}
 <h1>Tasks</h1>
+{{!-- {{log this}} --}}
+{{#each this.model as |task|}}
+<div class="card card-body bg-light">
+    <h4>{{task.title}}</h4>
+    <p>Due: {{task.date}}</p>
+    <p>{{task.description}}</p>
+</div>
+{{/each}}
