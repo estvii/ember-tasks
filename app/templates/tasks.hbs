@@ -3,8 +3,13 @@
 {{!-- {{log this}} --}}
 {{#each this.model as |task|}}
 <div class="card card-body bg-light">
-    <h4>{{task.title}}</h4>
+    <h4>
+        {{#link-to 'tasks.edit' task.id}}
+        {{task.title}}
+        {{/link-to}}
+    </h4>
     <p>Due: {{format-date task.date}}</p>
     <p>{{task.description}}</p>
+    <button {{action 'deleteTask' task.id}} class='btn btn-danger'>Delete</button>
 </div>
 {{/each}}
